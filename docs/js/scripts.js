@@ -47,11 +47,11 @@ var player = videojs('my-player', {
 
 player.thumbnails({
   0: {
-    src: 'images/_0.jpg',
+    src: 'https://s20.postimg.org/pcioadogd/image.jpg',
     width: '50px'
   },
   2: {
-    src: 'images/_1.jpg'
+    src: 'https://s20.postimg.org/9r1cqfznh/image.jpg'
   }
 });
 // var root = 'https://jsonplaceholder.typicode.com';
