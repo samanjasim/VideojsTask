@@ -44,14 +44,16 @@ var player = videojs('my-player', {
   });
 });
 
-
 player.thumbnails({
   0: {
     src: 'https://s20.postimg.org/pcioadogd/image.jpg',
     width: '50px'
   },
-  2: {
+  100: {
     src: 'https://s20.postimg.org/9r1cqfznh/image.jpg'
+  },
+  200: {
+    src: "https://s20.postimg.org/5558i3lu5/image.jpg"
   }
 });
 // var root = 'https://jsonplaceholder.typicode.com';
