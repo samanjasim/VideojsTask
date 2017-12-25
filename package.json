@@ -10,5 +10,8 @@
     "Videojs"
   ],
   "author": "Saman Jasim",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "videojs-thumbnails": "^1.0.3"
+  }
 }

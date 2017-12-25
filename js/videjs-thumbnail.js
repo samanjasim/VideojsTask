@@ -69,7 +69,7 @@
     /**
      * register the thubmnails plugin
      */
-    videojs.plugin('thumbnails', function(options) {
+    videojs.registerPlugin('thumbnails', function(options) {
       var div, settings, img, player, progressControl, duration, moveListener, moveCancel;
       settings = extend({}, defaults, options);
       player = this;
@@ -149,7 +149,16 @@
         // `left` applies to the mouse position relative to the player so we need
         // to remove the progress control's left offset to know the mouse position
         // relative to the progress control
-        mouseTime = Math.floor((left - progressControl.el().offsetLeft) / progressControl.width() * duration);
+
+        //Math.floor((left - progressControl.el().offsetLeft) / progressControl.width() * duration);
+
+        mouseTime = Math.floor(((left + 71) - progressControl.el().offsetLeft) / progressControl.width() * duration);
+        
+        // console.log('mouseTime= ', mouseTime);
+        // console.log('duration= ', duration);
+        // console.log('left= ', left);
+
+        //debugger;
         for (time in settings) {
           if (mouseTime > time) {
             active = Math.max(active, time);

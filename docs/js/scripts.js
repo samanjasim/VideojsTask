@@ -1,42 +1,15 @@
-console.log('script.js');
-//var player = videojs('my-player');
 var options = {};
 
-// var player = videojs('my-player', options, function onPlayerReady() {
-//   videojs.log('Your player is ready!');
-
-//   // In this context, `this` is the player that was created by Video.js.
-//   this.play();
-
-//   // How about an event listener?
-//   this.on('ended', function() {
-//     videojs.log('Awww...over so soon?!');
-//   });
-// });
-
-// player.upnext({
-//   timeout : 5000,
-//   headText : 'Up Next',
-//   cancelText: 'Cancel',
-//   getTitle : function() { return 'Next video title' },
-//   next : function () { performActionAfterTimeout() }
-// });
-
 function getTitle(){
-  console.log('get Title Function had been called up');
   return "Hi, this is a title";
 }
 
 function next(){
-  console.log('next Function had been called up');
   alert("Video ended");
 }
 
 var player = videojs('my-player', {
 }, function() {
-  videojs.log('Your player is ready!');
-
-  console.log('before set upnext');
   player.upnext({
     timeout : 5000,
     getTitle : getTitle,
@@ -44,24 +17,34 @@ var player = videojs('my-player', {
   });
 });
 
+
 player.thumbnails({
   0: {
     src: 'https://s20.postimg.org/pcioadogd/image.jpg',
-    width: '50px'
-  },
-  100: {
-    src: 'https://s20.postimg.org/9r1cqfznh/image.jpg'
+    width: '100px'
   },
   200: {
+    src: 'https://s20.postimg.org/9r1cqfznh/image.jpg',
+  },
+  800: {
     src: "https://s20.postimg.org/5558i3lu5/image.jpg"
+  }, 
+  1400: {
+    src: 'https://s20.postimg.org/i2a4v1ja5/image.jpgg',
+  }, 
+  2000: {
+    src: 'https://s20.postimg.org/7s7pvubf1/image.jpg'
+  }, 
+  2600: {
+    src: "https://s20.postimg.org/y0iul70nh/image.jpg"
+  }, 
+  3200: {
+    src: "https://s20.postimg.org/e5wsz260d/image.jpg"
+  }, 
+  3800: {
+    src: "https://s20.postimg.org/zfkf9wu0t/image.jpg"
+  },
+  4400: {
+    src: "https://s20.postimg.org/72oxjgvfx/image.jpg"
   }
 });
-// var root = 'https://jsonplaceholder.typicode.com';
-
-// $.ajax({
-//   url: root + '/posts/1',
-//   method: 'GET'
-// }).then(function(data) {
-//   console.log('inside then in ajax call');
-//   console.log(data);
-// });

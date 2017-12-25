@@ -2,3 +2,8 @@ body{
     margin: none;
     padding: none;
 }
+
+.video-js .vjs-big-play-button {
+    top: calc(50% - 30px);
+    left: calc(50% - 50px);
+}
