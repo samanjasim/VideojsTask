@@ -48,3 +48,41 @@ player.thumbnails({
     src: "https://s20.postimg.org/72oxjgvfx/image.jpg"
   }
 });
+
+// console.log('start working on event');
+
+// var Component = videojs.getComponent('Component');
+// console.log('Component= ', Component);
+// var myComponent = new Component(player);
+// console.log('myComponent= ', myComponent);
+// var myFunc = function() {
+//   var myComponent = this;
+//   console.log('myFunc called');
+// };
+// myComponent.on('eventType', myFunc);
+// myComponent.trigger('eventType');
+// logs 'myFunc called'
+
+// myComponent.off('eventType', myFunc);
+// myComponent.trigger('eventType');
+
+player.overlay({
+  content:  '<a href="#" class="img-overlay-container"> ' + 
+              '<img src="https://yt3.ggpht.com/proxy/MVg9cxKZ3pNBdv7JcKlAiDKex1KMMsfeaN6uKi0nITF3uOCzo9po6FZ95cArM2PVr_PDuG9OJKPKR_Ul4K8=-w480-h360" class="img-responsive">' +
+              '<div class="overlay-desc">' + 
+                '<p>This is Desc for the Video </p>' +
+              '</div>' +
+            '</a>',
+  overlays: [{
+    
+        // This overlay appears at 3 seconds and disappears at 15 seconds.
+        start: 3,
+        end: 15,
+      }, {
+    
+        // This overlay appears at 7 seconds and disappears at 22 seconds.
+        start: 12,
+        end: 22,
+        align: 'top-right'
+  }]
+});

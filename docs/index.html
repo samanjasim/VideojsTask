@@ -8,28 +8,35 @@
         <link href="https://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
         <link href="css/videojs-upnext.css" rel="stylesheet">
         <link href="css/videojs-thumbnail.css" rel="stylesheet">
+        <link href="css/videojs-overlay.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
             
         <div class="container">
             <h1>Test Video</h1>
+
+            <video id="my-player" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"
+            data-setup="{}"> 
+                
+                <!-- <source src="http://cn1.rgwha.elcld.com/mp4-240/B1C98368-8E3E-25FB-A611-C455D74B5040_video.mp4?response-content-disposition=attachment%3B%20filename%3D%22video.mp4%22&AWSAccessKeyId=I0J6G456M87IARXGNTCP&Expires=1514668194&Signature=bSDzsVrppFrw54yN9aVUKbGKkS8%3D"> -->
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+                <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+                <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+    
+            </video>
+            <!-- poster="MY_VIDEO_POSTER.jpg" -->
+
         </div>
-        <video id="my-player" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"
-        data-setup="{}"> 
-            <source src="http://cn1.rgwha.elcld.com/mp4-240/B1C98368-8E3E-25FB-A611-C455D74B5040_video.mp4?response-content-disposition=attachment%3B%20filename%3D%22video.mp4%22&AWSAccessKeyId=I0J6G456M87IARXGNTCP&Expires=1514668194&Signature=bSDzsVrppFrw54yN9aVUKbGKkS8%3D">
-            <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
-            <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
-            <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
-            <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
-        </video>
-        <!-- poster="MY_VIDEO_POSTER.jpg" -->
-        
+       
 
         <script src="js/jquery.min.3.2.1.js"></script>
         <script src="https://vjs.zencdn.net/6.4.0/video.js"></script>
         <script src="js/videojs-upnext.js"></script>
         <script src="js/videjs-thumbnail.js"></script>
+        <script src="js/videojs-overlay.js"></script>
         <script src="js/scripts.js"></script>        
 
     </body>
