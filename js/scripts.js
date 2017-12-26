@@ -13,7 +13,8 @@ var player = videojs('my-player', {
   player.upnext({
     timeout : 5000,
     getTitle : getTitle,
-    next : next
+    next : next,
+    showTime: 3,
   });
 });
 
@@ -73,16 +74,26 @@ player.overlay({
                 '<p>This is Desc for the Video </p>' +
               '</div>' +
             '</a>',
-  overlays: [{
+  isUpNext: true,
+  overlays: [
+    {
     
         // This overlay appears at 3 seconds and disappears at 15 seconds.
         start: 3,
         end: 15,
-      }, {
+    }, {
     
         // This overlay appears at 7 seconds and disappears at 22 seconds.
         start: 12,
         end: 22,
         align: 'top-right'
-  }]
+    }
+  ]
 });
+
+// TODO: the code for shown the Next .
+// setTimeout(function() {
+//   player.trigger('ended');
+// }, 3000);
+
+// TODO: you sould make the player Variable in Window With NoCofiict to be shaerd between Files

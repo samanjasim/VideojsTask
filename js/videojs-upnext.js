@@ -169,13 +169,24 @@
    */
   var upnext = function upnext(options) {
     var opts = options || {};
+   // var showTime = isNaN(parseInt(options.showTime)) ? '' : parseInt(options.showTime) * 1000;
+   // console.log('var showTime= ', showTime);
+   // console.log('option.showTime= ', options.showTime);
     var settings = {
       next: opts.next,
       getTitle: opts.getTitle,
       timeout: opts.timeout || 5000,
       headText: opts.headText || 'Up Next'
     };
-  
+    
+    // TODO: newely Code to make the upnext show in certian Amount of Time.
+    // if(showTime !== '') {
+    //   console.log('inside if statment in the videojs-upnext.js');
+    //   setTimeout(function() {
+    //     player.trigger('ended');
+    //   }, showTime);
+    // }
+
     this.addChild('endCard', settings);
   };
   
