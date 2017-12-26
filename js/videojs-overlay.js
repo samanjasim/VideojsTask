@@ -300,18 +300,12 @@ var Overlay = function (_Component) {
 
   Overlay.prototype.shouldShow_ = function shouldShow_(time, type) {
 
-    console.log('inside should Show');
-    console.log('this.options_= ', this.options_);
-
     var start = this.options_.start;
     var end = this.options_.end;
     var isUpNext = this.options_.isUpNext || '';
     //console.log('upNextTriggered= ', this.options_.upNextTriggered);
 
     if(isNumber(start) && isUpNext && !this.options_.upNextTriggered) {
-      console.log('inside the Newly added if Statement');
-      console.log('start= ', parseInt(start));
-      console.log('time= ', parseInt(time));
       if(parseInt(time) === start) {
         this.options_.upNextTriggered = true;
         //console.log('before trigger');

@@ -132,6 +132,7 @@ var Overlay = function (_Component) {
   inherits(Overlay, _Component);
 
   function Overlay(player, options) {
+    console.log('options= ', options);
     classCallCheck(this, Overlay);
 
     var _this = possibleConstructorReturn(this, _Component.call(this, player, options));
@@ -298,14 +299,23 @@ var Overlay = function (_Component) {
 
 
   Overlay.prototype.shouldShow_ = function shouldShow_(time, type) {
+
     var start = this.options_.start;
     var end = this.options_.end;
+    var isUpNext = this.options_.isUpNext || '';
+    //console.log('upNextTriggered= ', this.options_.upNextTriggered);
 
-    if (isNumber(start)) {
-
+    if(isNumber(start) && isUpNext && !this.options_.upNextTriggered) {
+      if(parseInt(time) === start) {
+        this.options_.upNextTriggered = true;
+        //console.log('before trigger');
+        player.trigger('ended');
+      }
+      return false;
+    } else if (isNumber(start)) {
+      console.log('inside second list');
       if (isNumber(end)) {
         return time >= start && time < end;
-
         // In this case, the start is a number and the end is a string. We need
         // to check whether or not the overlay has shown since the last seek.
       } else if (!this.hasShownSinceSeek_) {
