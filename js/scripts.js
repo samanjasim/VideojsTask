@@ -81,13 +81,14 @@ player.overlay({
         // This overlay appears at 3 seconds and disappears at 15 seconds.
         start: 3,
         end: 15,
-    }, {
+    }, 
+    // {
     
-        // This overlay appears at 7 seconds and disappears at 22 seconds.
-        start: 12,
-        end: 22,
-        align: 'top-right'
-    }
+    //     // This overlay appears at 7 seconds and disappears at 22 seconds.
+    //     start: 12,
+    //     end: 22,
+    //     align: 'top-right'
+    // }
   ]
 });
 

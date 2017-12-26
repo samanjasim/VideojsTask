@@ -132,7 +132,7 @@ var Overlay = function (_Component) {
   inherits(Overlay, _Component);
 
   function Overlay(player, options) {
-    console.log('options= ', options);
+    //console.log('options= ', options);
     classCallCheck(this, Overlay);
 
     var _this = possibleConstructorReturn(this, _Component.call(this, player, options));
@@ -313,7 +313,7 @@ var Overlay = function (_Component) {
       }
       return false;
     } else if (isNumber(start)) {
-      console.log('inside second list');
+      //console.log('inside second list');
       if (isNumber(end)) {
         return time >= start && time < end;
         // In this case, the start is a number and the end is a string. We need
